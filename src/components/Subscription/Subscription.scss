@@ -1,0 +1,80 @@
+@import "../../styles/variables";
+
+.subscription {
+
+  &__wrapper {
+    background-color: $shark;
+    color: $basic_white;
+    padding: 50px 40px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media(min-width: $tablet-width) {
+  .subscription {
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__text-block {
+      max-width: 235px;
+    }
+
+    &__title {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+
+    &__text {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+
+    &__form {
+      margin-left: auto;
+      margin-right: 79px;
+    }
+  }
+}
+
+@media(min-width: $desktop-width) {
+  .subscription {
+    &__wrapper {
+      padding: 83px 80px 92px 80px;
+    }
+
+    &__title {
+      font-size: 48px;
+      line-height: 58px;
+      margin-bottom: 26px;
+    }
+
+    &__text {
+      font-size: 28px;
+      width: 300px;
+    }
+
+    &__text-block {
+      max-width: none;
+    }
+
+    &__form {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+}

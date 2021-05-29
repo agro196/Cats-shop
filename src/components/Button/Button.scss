@@ -1,0 +1,90 @@
+@import "../../styles/variables";
+
+.btn {
+  padding: 0;
+  font-family: $Montserrat;
+  border: none;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  background-color: $downey;
+  color: $basic_white;
+  width: 100%;
+  transition: background-color 0.3s ease-out;
+
+  &:hover {
+    background-color: darken($downey, 10);
+  }
+
+  &:active {
+    background-color: darken($downey, 15);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+    background-color: $downey;
+  }
+
+  &--round {
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px;
+  }
+
+  &--sold {
+    background-color: $shark;
+
+    &:hover {
+      background-color: darken($shark, 10);
+    }
+
+    &:active {
+      background-color: darken($shark, 15);
+    }
+
+    &:disabled {
+      background-color: $shark;
+    }
+  }
+
+  &--show {
+    max-width: 380px;
+    background-color: $basic_white;
+    color: $basic_black;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid $silver;
+
+    &:hover {
+      background-color: darken($basic_white, 10);
+    }
+
+    &:active {
+      background-color: darken($basic_white, 15);
+    }
+
+    &:disabled {
+      background-color: $basic_white;
+    }
+  }
+
+  &--icon {
+    width: 59px;
+    height: 59px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .btn {
+    &--submit {
+      padding: 23px 0;
+      width: 250px;
+    }
+  }
+}
+

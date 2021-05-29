@@ -1,0 +1,123 @@
+@import "../../styles/variables";
+
+.catalog {
+
+    &__wrapper {
+        padding-bottom: 83px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 0;
+        margin: -10px;
+    }
+
+    &__item {
+        width: 100%;
+        padding: 10px;
+    }
+
+    &__show-button {
+        display: block;
+        margin: 68px auto 0;
+    }
+
+    &__sorting {
+        padding-top: 37px;
+        padding-bottom: 37px;
+    }
+
+    &__sorting-title {
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+    }
+
+    &__sorting-list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__sorting-item {
+        margin-top: 7px;
+    }
+
+    &__sorting-item-button {
+        color: $basic_black;
+        font-size: 18px;
+        position: relative;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+
+        &::after {
+            content: " ";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-left: 2px solid $basic_black;
+            border-bottom: 2px solid $basic_black;
+            display: block;
+            transform: rotate(-45deg);
+            right: -25px;
+            top: 5px;
+            transition: transform 0.3s ease-out;
+        }
+
+        &:hover {
+            color: lighten($basic_black, 30);
+        }
+
+        &:active {
+            color: lighten($basic_black, 50);
+        }
+
+        &--desc {
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+
+        &--asc {
+            &::after {
+                transform: rotate(135deg);
+            }
+        }
+    }
+
+}
+
+@media (min-width: $tablet-width) {
+    .catalog {
+        &__item {
+            max-width: 50%;
+        }
+
+        &__sorting {
+            display:flex;
+            align-items: baseline;
+        }
+
+        &__sorting-list {
+            display: flex;
+            padding-left: 48px;
+        }
+
+        &__sorting-item {
+            margin-right: 84px;
+        }
+
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .catalog {
+        &__item {
+            max-width: 33.333%;
+        }
+    }
+}
+

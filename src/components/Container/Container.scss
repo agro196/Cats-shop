@@ -1,0 +1,13 @@
+@import "../../styles/variables";
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
